@@ -49,19 +49,19 @@ function getInputValue(product) {
         booking.style.display= 'none';
         document.getElementById('first-class-count').innerText = FirstClassTicket;
         let firstClassPrice = FirstClassTicket * 150;
-        document.getElementById('first-class-price').innerText = firstClassPrice;
+        document.getElementById('first-class-price').innerText = '$'+firstClassPrice;
 
         document.getElementById('economy-count').innerText = economyTicket;
         let economyPrice = economyTicket * 100;
-        document.getElementById('economy-price').innerText = economyPrice;
+        document.getElementById('economy-price').innerText = '$'+economyPrice;
 
-        document.getElementById('subtotal-price').innerText = total;
+        document.getElementById('subtotal-price').innerText = '$'+total;
 
         let vatMoney = Math.round(total * 0.1);
-        document.getElementById('vat-price').innerText = vatMoney;
+        document.getElementById('vat-price').innerText = '$'+vatMoney;
 
         let GrandTotal = total + vatMoney;
-        document.getElementById('total-price').innerText = GrandTotal;
+        document.getElementById('total-price').innerText = '$'+GrandTotal;
 
      }
      else{
