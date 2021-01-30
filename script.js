@@ -34,7 +34,7 @@ function getInputValue(product) {
     const ticketCount = parseInt(tickettInput.value);
     return ticketCount;
  }
-
+//work on buy now button
  function buyNow() {
      const FirstClassTicket = getInputValue('first-class-ticket');
      const economyTicket = getInputValue('economy-ticket');
