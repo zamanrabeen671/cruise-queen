@@ -52,7 +52,7 @@ function getInputValue(product) {
         document.getElementById('first-class-price').innerText = firstClassPrice;
 
         document.getElementById('economy-count').innerText = economyTicket;
-        let economyPrice = economyTicket * 150;
+        let economyPrice = economyTicket * 100;
         document.getElementById('economy-price').innerText = economyPrice;
 
         document.getElementById('subtotal-price').innerText = total;
