@@ -124,12 +124,21 @@ nav ul li a:hover, a.active{
 }
 #show-value{
     display: none;
+    padding-top: 100px;
 }
 .container-ticket{
-    background-color: yellow;
-    height: 200px;
+    background-color: white;
+    height: 400px;
     width: 65%;
     margin-left: 180px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px gray;
+}
+.confirm-box{
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    padding: 10px;
+    line-height: 2;
+    font-size: 25px;
 }

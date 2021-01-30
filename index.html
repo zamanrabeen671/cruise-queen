@@ -37,7 +37,7 @@
         </div>
 
 
-        <div class="booking-form">
+        <div id="booking-area" class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -108,18 +108,18 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="buyNow()" class="btn-style">Book Now</button>
         </div>
     </main>
     <section id="show-value">
         <div class="container-ticket">
             <div class="confirm-box">
-                <h1 class="header-info">passenger current status</h1>
-                <h5>You buy <span id="first-class-count">0</span>Tickets: <span id="first-class-price">00</span>Tk</h5>
-                <h5>You buy <span id="economy-count">0</span>Tickets: <span id="economy-price">00</span>Tk</h5>
-                <h5>SubTotal Amount: <span id="subtotal">00</span></h5>
-                <h5>Charge 10% Vat: <span id="vat">00</span></h5>
-                <h5>Total Amount: <span id="total">00</span></h5>
+                <h1 class="header-info">Payment Information</h1>
+                <h4>You buy <span id="first-class-count">0</span> First-Class Tickets: <span id="first-class-price">00</span></h4>
+                <h4>You buy <span id="economy-count">0</span> Economy Tickets: <span id="economy-price">00</span></h4>
+                <h4>SubTotal Amount: <span id="subtotal-price">00</span></h4>
+                <h4>Charge 10% Vat: <span id="vat-price">00</span></h4>
+                <h4>Total Amount: <span id="total-price">00</span></h4>
             </div>
         </div>
     </section>

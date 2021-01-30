@@ -10,14 +10,6 @@ function ticketValueHandler(ticket, isincrease) {
         Counter--;
     }
     ticketInput.value = Counter;
-    let ticketTotal = 0;
-    if(ticket == 'first-class-ticket') {
-        ticketTotal = Counter * 150;
-    }
-    if(ticket == 'economy-ticket') {
-        ticketTotal = Counter * 100;
-    }
-    document.getElementById(ticket+'-total').innerText = ticketTotal;
     calculateTotal();
 
 }
@@ -32,6 +24,8 @@ function calculateTotal() {
  
     const totalAmount = totalPrice + vat;
     document.getElementById('total-amout').innerText = '$' + totalAmount;
+
+    
  
  }
 
@@ -39,4 +33,38 @@ function getInputValue(product) {
     const tickettInput = document.getElementById(product + '-count');
     const ticketCount = parseInt(tickettInput.value);
     return ticketCount;
+ }
+
+ function buyNow() {
+     const FirstClassTicket = getInputValue('first-class-ticket');
+     const economyTicket = getInputValue('economy-ticket');
+
+     let total = FirstClassTicket * 150 + economyTicket * 100;
+
+     if(total > 0) {
+         const showValue = document.getElementById('show-value');
+         showValue.style.display = 'block';
+
+        const booking = document.getElementById('booking-area');
+        booking.style.display= 'none';
+        document.getElementById('first-class-count').innerText = FirstClassTicket;
+        let firstClassPrice = FirstClassTicket * 150;
+        document.getElementById('first-class-price').innerText = firstClassPrice;
+
+        document.getElementById('economy-count').innerText = economyTicket;
+        let economyPrice = economyTicket * 150;
+        document.getElementById('economy-price').innerText = economyPrice;
+
+        document.getElementById('subtotal-price').innerText = total;
+
+        let vatMoney = Math.round(total * 0.1);
+        document.getElementById('vat-price').innerText = vatMoney;
+
+        let GrandTotal = total + vatMoney;
+        document.getElementById('total-price').innerText = GrandTotal;
+
+     }
+     else{
+         alert("you dont buy any Ticket")
+     }
  }
